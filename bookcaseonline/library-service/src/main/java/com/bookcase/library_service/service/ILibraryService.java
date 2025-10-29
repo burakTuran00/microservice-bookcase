@@ -4,8 +4,12 @@ import com.bookcase.library_service.dto.AddBookRequest;
 import com.bookcase.library_service.dto.LibraryDto;
 import com.bookcase.library_service.model.Library;
 
+import java.util.List;
+
 public interface ILibraryService {
     LibraryDto getAllBooksInLibraryById(String libraryId);
     LibraryDto createLibrary();
     void  addBookToLibrary(AddBookRequest request);
+
+    List<String> getAllLibraries();
 }
